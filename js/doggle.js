@@ -1,9 +1,9 @@
 const createjs = window.createjs;
 
 class Doggle {
-  constructor(name = "Doggle", color = "#00BCD4") {
-  this.name = name;
-  this.color = color;
+  constructor() {
+  this.name = "Doggle";
+  this.color = "#00BCD4";
   this.x = 0;
   this.y = 0;
   this.z = 0;
@@ -11,6 +11,7 @@ class Doggle {
   //available poses: sit, up, down
   this.pose = "sit";
   this.stage = new createjs.Stage("pet");
+  this.image = new createjs.Container();
   }
 
   draw() {

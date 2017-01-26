@@ -349,6 +349,7 @@
 	      var modalButton = document.createElement("BUTTON");
 	      modalButton.addEventListener("click", this.clickModal);
 	      modalButton.setAttribute("id", "modal");
+	      modalButton.innerHTML = "Help";
 	
 	      $("#nameDoggle").append($makeshiftLabel, $namingDoggle, pinkButton, blueButton, tanButton, modalButton);
 	
@@ -406,13 +407,10 @@
 	
 	var Doggle = function () {
 	  function Doggle() {
-	    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "Doggle";
-	    var color = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "#00BCD4";
-	
 	    _classCallCheck(this, Doggle);
 	
-	    this.name = name;
-	    this.color = color;
+	    this.name = "Doggle";
+	    this.color = "#00BCD4";
 	    this.x = 0;
 	    this.y = 0;
 	    this.z = 0;
@@ -420,6 +418,7 @@
 	    //available poses: sit, up, down
 	    this.pose = "sit";
 	    this.stage = new createjs.Stage("pet");
+	    this.image = new createjs.Container();
 	  }
 	
 	  _createClass(Doggle, [{

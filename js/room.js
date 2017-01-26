@@ -69,6 +69,7 @@ class Room {
     let modalButton = document.createElement("BUTTON");
     modalButton.addEventListener("click", this.clickModal);
     modalButton.setAttribute("id", "modal");
+    modalButton.innerHTML = "Help";
 
     $("#nameDoggle").append($makeshiftLabel, $namingDoggle, pinkButton, blueButton, tanButton, modalButton);
 
