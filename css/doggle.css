@@ -1,0 +1,50 @@
+div.flex {
+  position: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: center;
+  height: 200px;
+  width: 1000px;
+  margin: 20px;
+}
+
+div.flex button.selected {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+div.flex button {
+  min-height: 50px;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+div.flex button:focus {
+  outline: none;
+}
+
+div.flex button:hover {
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+div text {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+#blue {
+  background-color: DarkTurquoise;
+}
+
+#pink {
+  background-color: HotPink;
+}
+
+#tan {
+  background-color: Orange;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "doggle",
+  "version": "1.0.0",
+  "description": "this is for pet sim Doggle",
+  "main": "doggle.js",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "transpile-es2015": "babel src -d lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^6.2.10",
+    "createjs-easeljs": "^0.8.2",
+    "jquery": "^3.1.1",
+    "tingle.js": "^0.9.0",
+    "webpack": "^1.13.1"
+  }
+}
