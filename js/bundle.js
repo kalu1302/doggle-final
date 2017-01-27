@@ -404,7 +404,7 @@
 	
 	        requestAnimationFrame(render);
 	
-	        doggleShape.rotation.x += 0.01;
+	        doggleShape.rotation.x += 0.001;
 	        doggleShape.rotation.y += 0.01;
 	
 	        renderer.render(scene, camera);
