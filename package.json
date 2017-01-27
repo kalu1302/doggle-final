@@ -17,7 +17,6 @@
   "license": "ISC",
   "dependencies": {
     "babel-loader": "^6.2.10",
-    "createjs-easeljs": "^0.8.2",
     "jquery": "^3.1.1",
     "tingle.js": "^0.9.0",
     "webpack": "^1.13.1"
