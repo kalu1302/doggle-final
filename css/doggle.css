@@ -1,8 +1,42 @@
+#overlay {
+  width: 1000px;
+  height: 1000px;
+  position: relative;
+}
+
+#nameDoggle,
+#render3D {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#nameDoggle {
+  z-index: 10;
+}
+
+#render3D {
+  z-index: 5;
+}
+
 div.flex {
-  position: flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;;
+  align-items: flex-start;
+  align-content: center;
+  height: 200px;
+  width: 1000px;
+  margin: 20px;
+}
+
+#nameDoggle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;;
   align-items: flex-start;
   align-content: center;
   height: 200px;
@@ -20,6 +54,7 @@ div.flex button {
   width: 50px;
   height: 50px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  flex: auto;
 }
 
 div.flex button:focus {
@@ -38,7 +73,7 @@ div text {
 }
 
 #blue {
-  background-color: DarkTurquoise;
+  background-color: rgb(102, 204, 255);
 }
 
 #pink {
@@ -47,4 +82,8 @@ div text {
 
 #tan {
   background-color: Orange;
+}
+
+#help {
+
 }

@@ -246,6 +246,7 @@
 	  stage.update();
 	  var room = new _room2.default();
 	  room.createMenu();
+	  room.render3D();
 	
 	  // stage.append(name, color, submit);
 	  // stage.addChild(submit);
@@ -275,6 +276,7 @@
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
+	var THREE = window.THREE;
 	var createjs = window.createjs;
 	
 	
@@ -382,6 +384,34 @@
 	  }, {
 	    key: 'clickPet',
 	    value: function clickPet() {}
+	  }, {
+	    key: 'render3D',
+	    value: function render3D() {
+	      var scene = new THREE.Scene();
+	      var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+	
+	      var renderer = new THREE.WebGLRenderer({ alpha: true });
+	      renderer.setSize(window.innerWidth, window.innerHeight);
+	      document.getElementById("render3D").appendChild(renderer.domElement);
+	
+	      var geometry = new THREE.DodecahedronGeometry(10, 0);
+	      var doggleShape = THREE.SceneUtils.createMultiMaterialObject(geometry, [new THREE.MeshBasicMaterial({ color: 0x66CCFF }), new THREE.MeshBasicMaterial({ color: 0xCCFFFF, wireframe: true })]);
+	      scene.add(doggleShape);
+	
+	      camera.position.z = 60;
+	
+	      function render() {
+	
+	        requestAnimationFrame(render);
+	
+	        doggleShape.rotation.x += 0.01;
+	        doggleShape.rotation.y += 0.01;
+	
+	        renderer.render(scene, camera);
+	      }
+	
+	      render();
+	    }
 	  }]);
 	
 	  return Room;

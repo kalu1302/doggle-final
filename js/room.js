@@ -1,6 +1,9 @@
+const THREE = window.THREE;
 const createjs = window.createjs;
 import Doggle from './doggle';
 import tingle from './tingle';
+
+
 
 const Y_MENU = 100;
 const X_MENU_MARGIN = 50;
@@ -101,6 +104,39 @@ class Room {
   clickPet() {
 
 
+  }
+
+
+  render3D() {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+
+    const renderer = new THREE.WebGLRenderer({alpha: true});
+    renderer.setSize( window.innerWidth, window.innerHeight );
+    document.getElementById("render3D").appendChild( renderer.domElement );
+
+    const geometry = new THREE.DodecahedronGeometry( 10, 0);
+    const doggleShape = THREE.SceneUtils.createMultiMaterialObject( geometry, [
+      new THREE.MeshBasicMaterial( { color: 0x66CCFF} ),
+      new THREE.MeshBasicMaterial( { color: 0xCCFFFF, wireframe: true} )
+    ]);
+    scene.add( doggleShape );
+
+
+
+    camera.position.z = 60;
+
+    function render() {
+
+      requestAnimationFrame( render );
+
+        doggleShape.rotation.x += 0.01;
+        doggleShape.rotation.y += 0.01;
+
+      renderer.render( scene, camera );
+    }
+
+    render();
   }
 }
 

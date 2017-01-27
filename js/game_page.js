@@ -18,6 +18,7 @@ export const GamePage = (canvas, stage) => {
     stage.update();
     const room = new Room();
     room.createMenu();
+    room.render3D();
 
   // stage.append(name, color, submit);
   // stage.addChild(submit);
